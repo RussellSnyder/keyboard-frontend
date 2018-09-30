@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Keyboard/Keyboard.component.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/Keyboard</a> Keyboard.component.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">37.14% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>26/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.55% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.45% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/93</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import Tone from 'tone';
+&nbsp;
+import {PianoKey} from "../PianoKey/PianoKey.component";
+&nbsp;
+const SOUND_FILE_LOCATION = "http://localhost:3000/grand-piano-mp3-sounds/";
+&nbsp;
+&nbsp;
+export class Keyboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pianoReady: false,
+            notesPlaying: [],
+        }
+        this.piano = null;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    lo</span>adPiano() {
+<span class="cstat-no" title="statement not covered" >        this.piano = new Tone.Sampler({</span>
+            'C4' : 'C4.mp3',
+            'Db4' : 'Db4.mp3',
+            'D4' : 'D4.mp3',
+            'Eb4' : 'Eb4.mp3',
+            'E4' : 'E4.mp3',
+            'F4' : 'F4.mp3',
+            'Gb4' : 'Gb4.mp3',
+            'G4' : 'G4.mp3',
+            'Ab4' : 'Ab4.mp3',
+            'A4' : 'A4.mp3',
+            'Bb4' : 'Bb4.mp3',
+            'B4' : 'B4.mp3',
+            'C5' : 'C5.mp3',
+            'Db5' : 'Db5.mp3',
+            'D5' : 'D5.mp3',
+            'Eb5' : 'Eb5.mp3',
+            'E5' : 'E5.mp3',
+            'F5' : 'F5.mp3',
+            'Gb5' : 'Gb5.mp3',
+            'G5' : 'G5.mp3',
+            'Ab5' : 'Ab5.mp3',
+            'A5' : 'A5.mp3',
+            'Bb5' : 'Bb5.mp3',
+            'B5' : 'B5.mp3',
+        }, {
+            'onload': <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.onSamplesLoaded(),</span>
+            'release' : 1,
+            'baseUrl' : SOUND_FILE_LOCATION
+        }).toMaster();
+    }
+    componentDidMount() {
+        // Tone.JS and Jest bug
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (! this.props.disableTone) {
+<span class="cstat-no" title="statement not covered" >            this.loadPiano()</span>
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    on</span>SamplesLoaded() {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            pianoReady: true
+        })
+        // this.playSequence(this.props.playerPianoData)
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    co</span>mponentDidUpdate(prevProps, prevState, snapshot) {
+<span class="cstat-no" title="statement not covered" >        if (this.props.playbackCalled &amp;&amp; (!prevProps.playerPianoPlay &amp;&amp; this.props.playerPianoPlay)) {</span>
+<span class="cstat-no" title="statement not covered" >            this.playSequence()</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (this.props.playbackCalled &amp;&amp; (prevProps.playerPianoPlay &amp;&amp; !this.props.playerPianoPlay)) {</span>
+<span class="cstat-no" title="statement not covered" >            this.stopSequence()</span>
+        }
+    }
+&nbsp;
+    render() {
+        return (
+            &lt;div className={this.state.pianoReady ? <span class="branch-0 cbranch-no" title="branch not covered" >"ready" </span>: "not-ready"} id="Keyboard"&gt;
+                &lt;svg className="piano" height="230" width="1000"&gt;
+                    &lt;PianoKey
+                        id="c4"
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("C4") &gt; -1}</span>
+                        points="200,10 230,10 230,100 245,100 245,220 200,220 200,10" className="white c c4"
+                        midiNote="60" noteName="C4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("D4") &gt; -1}</span>
+                        points="245,100 260,100 260,10 275,10 275,100 290,100 290,220 245,220 245,100" className="white d"
+                        midiNote="62" noteName="D4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("E4") &gt; -1}</span>
+                        points="305,10 335,10 335,220 290,220 290,100 305,100 305,10" className="white e"
+&nbsp;
+                        midiNote="64" noteName="E4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("F4") &gt; -1}</span>
+                        points="335,10 365,10 365,100 380,100 380,220 335,220 335,10" className="white f"
+                        midiNote="65" noteName="F4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("G4") &gt; -1}</span>
+                        points="380,100 395,100 395,10 410,10 410,100 425,100 425,220 380,220 380,100" className="white g"
+                        midiNote="67" noteName="G4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("A4") &gt; -1}</span>
+                        points="425,100 440,100 440,10 455,10 455,100 470,100 470,220 425,220 425,100" className="white a"
+                        midiNote="69" noteName="A4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("B4") &gt; -1}</span>
+                        points="470,100 485,100 485,10 515,10 515,220 470,220 470,100" className="white b"
+                        midiNote="71" noteName="B4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("C5") &gt; -1}</span>
+                        points="515,10 545,10 545,100 560,100 560,220 515,220 515,10" className="white c"
+                        midiNote="72" noteName="C5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("D5") &gt; -1}</span>
+                        points="560,100 575,100 575,10 590,10 590,100 605,100 605,220 560,220" className="white d"
+                        midiNote="74" noteName="D5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("E5") &gt; -1}</span>
+                        points="605,100 620,100 620,10 650,10 650,220 605,220 605,100" className="white e"
+                        midiNote="76" noteName="E5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("F5") &gt; -1}</span>
+                        points="650,10 680,10 680,100 695,100 695,220 650,220 650,10" className="white f"
+                        midiNote="77" noteName="F5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("G5") &gt; -1}</span>
+                        points="695,100 710,100 710,10 725,10 725,100 740,100 740,220 695,220 695,100" className="white g"
+                        midiNote="79" noteName="G5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("A5") &gt; -1}</span>
+                        points="740,100 755,100 755,10 770,10 770,100 785,100 785,220 740,220 740,100" className="white a"
+                        midiNote="81" noteName="A5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("B5") &gt; -1}</span>
+                        points="785,100 800,100 800,10 830,10 830,220 785,220 785,100" className="white b"
+                        midiNote="83" noteName="B5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Db4") &gt; -1}</span>
+                        points="230,10 260,10 260,100 230,100 230,10" className="black db"
+                        midiNote="73" noteName="Db4"
+                            playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Eb4") &gt; -1}</span>
+                        points="275,10 305,10 305,100 275,100 275,10" className="black eb"
+                        midiNote="75" noteName="Eb4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Gb4") &gt; -1}</span>
+                        points="365,10 395,10 395,100 365,100 365,10" className="black gb"
+                        midiNote="78" noteName="Gb4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Ab4") &gt; -1}</span>
+                        points="410,10 440,10 440,100 410,100 410,10" className="black ab"
+                        midiNote="80" noteName="Ab4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Bb4") &gt; -1}</span>
+                        points="455,10 485,10 485,100 455,100 455,10" className="black bb"
+                        midiNote="50" noteName="Bb4"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Db5") &gt; -1}</span>
+                        points="545,10 575,10 575,100 545,100 545,10" className="black db"
+                        midiNote="73" noteName="Db5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Eb5") &gt; -1}</span>
+                        points="590,10 620,10 620,100 590,100 590,10" className="black eb"
+                        midiNote="75" noteName="Eb5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Gb5") &gt; -1}</span>
+                        points="680,10 710,10 710,100 680,100 680,10" className="black gb"
+                        midiNote="78" noteName="Gb5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Ab5") &gt; -1}</span>
+                        points="725,10 755,10 755,100 725,100 725,10" className="black ab"
+                        midiNote="80" noteName="Ab5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                    &lt;PianoKey
+                        active={this.state.notesPlaying.length &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.state.notesPlaying.indexOf("Bb5") &gt; -1}</span>
+                        points="770,10 800,10 800,100 770,100 770,10" className="black bb"
+                        midiNote="82" noteName="Bb5"
+                        playNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.playNote(noteName)}</span>
+                        stopNoteHandler={<span class="fstat-no" title="function not covered" >(m</span>idiNote, noteName) =&gt; <span class="cstat-no" title="statement not covered" >this.stopNote(noteName)}</span>
+                    /&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+        )
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    st</span>opNote(noteName) {
+<span class="cstat-no" title="statement not covered" >        this.piano.triggerRelease(noteName);</span>
+        let keyindex = <span class="cstat-no" title="statement not covered" >this.state.notesPlaying.length &gt; 0 ? this.state.notesPlaying.indexOf(noteName) : -1;</span>
+<span class="cstat-no" title="statement not covered" >        if (keyindex &gt; -1) {</span>
+            let newState = <span class="cstat-no" title="statement not covered" >this.state.notesPlaying.splice(keyindex, 1);</span>
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                notesPlaying: newState
+            })
+        }
+&nbsp;
+    }
+<span class="fstat-no" title="function not covered" >    pl</span>ayNote(noteName) {
+<span class="cstat-no" title="statement not covered" >        this.piano.triggerAttack(noteName);</span>
+        let newNotesPlayingState = <span class="cstat-no" title="statement not covered" >this.state.notesPlaying.length &gt; 0 ? this.state.notesPlaying.push(noteName) : [noteName];</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            notesPlaying: newNotesPlayingState
+        })
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    tr</span>iggerSynthNote(note, length) {
+<span class="cstat-no" title="statement not covered" >        this.piano.triggerAttackRelease(note, length)</span>
+<span class="cstat-no" title="statement not covered" >        this.triggerNoteGUIAttackRelease(note, length)</span>
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    tr</span>iggerNoteGUIAttackRelease(note, length) {
+        let currentNotesPlaying = <span class="cstat-no" title="statement not covered" >this.state.notesPlaying.slice(0);</span>
+<span class="cstat-no" title="statement not covered" >        currentNotesPlaying.push(note)</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            notesPlaying: currentNotesPlaying
+        })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+            let indexOfNote =  <span class="cstat-no" title="statement not covered" >this.state.notesPlaying.indexOf(note);</span>
+<span class="cstat-no" title="statement not covered" >            if (indexOfNote &lt; 0) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                notesPlaying: this.state.notesPlaying.splice(indexOfNote, 1)
+            })
+        }, length);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    pl</span>aySequence() {
+        let {keysPlayed, keysPlayedLength, tempo} = <span class="cstat-no" title="statement not covered" >this.props.playerPianoData;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        Tone.Transport.bpm.value = tempo;</span>
+        let timeAccum = <span class="cstat-no" title="statement not covered" >0;</span>
+&nbsp;
+        // generate the composition
+<span class="cstat-no" title="statement not covered" >        keysPlayed.forEach(<span class="fstat-no" title="function not covered" >(n</span>ote, i) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            Tone.Transport.scheduleOnce (<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.triggerSynthNote(note, keysPlayedLength[i]),</span> timeAccum)</span>
+<span class="cstat-no" title="statement not covered" >            timeAccum += Tone.Time(keysPlayedLength[i]);</span>
+        })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        Tone.Transport.start();</span>
+<span class="cstat-no" title="statement not covered" >        Tone.Transport.scheduleOnce (<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.endOfSongReached(),</span> timeAccum);</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    en</span>dOfSongReached() {
+<span class="cstat-no" title="statement not covered" >        this.props.doneHandler();</span>
+<span class="cstat-no" title="statement not covered" >        Tone.Transport.stop();</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            notesPlaying: []
+        })
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    st</span>opSequence() {
+<span class="cstat-no" title="statement not covered" >        this.props.doneHandler();</span>
+<span class="cstat-no" title="statement not covered" >        Tone.Transport.stop();</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            notesPlaying: []
+        })
+    }
+}
+&nbsp;
+export default Keyboard;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 29 2018 22:51:29 GMT+0200 (W. Europe Daylight Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

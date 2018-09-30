@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Changes className when state active changes 1`] = `
+<polygon
+  className="undefined"
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseUp={[Function]}
+/>
+`;
+
+exports[`Changes className when state active changes 2`] = `
+<polygon
+  className="undefined"
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseUp={[Function]}
+/>
+`;
+
+exports[`Changes className when state active changes 3`] = `
+<polygon
+  className="undefined"
+  onMouseDown={[Function]}
+  onMouseOut={[Function]}
+  onMouseUp={[Function]}
+/>
+`;

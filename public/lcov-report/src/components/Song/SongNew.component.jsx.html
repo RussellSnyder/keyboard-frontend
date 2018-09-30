@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Song/SongNew.component.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/Song</a> SongNew.component.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { Mutation } from 'react-apollo'
+import gql from 'graphql-tag'
+&nbsp;
+// import {getAllSongData} from "./Queries"
+// import {Loading} from "./Loading.component"
+&nbsp;
+export class SongNew extends Component {
+<span class="fstat-no" title="function not covered" >    co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >        super(props);</span>
+<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+            showAddedMessage: false,
+            title: "",
+            tempo: "",
+            keysPlayed: [],
+            keysPlayedLength: []
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >re</span>nder() {
+&nbsp;
+    const ADD_SONG = <span class="cstat-no" title="statement not covered" >gql`</span>
+        mutation AddSong($title: String!, $tempo: String!, $keysPlayed: [String], $keysPlayedLength: [String]) {
+            addSong(title: $title, tempo: $tempo, keysPlayed: $keysPlayed, keysPlayedLength: $keysPlayedLength) {
+                title
+                tempo
+                keysPlayed
+                keysPlayedLength
+            }
+        }
+    `;
+&nbsp;
+        let {title, tempo, keysPlayed, keysPlayedLength} = <span class="cstat-no" title="statement not covered" >this.state;</span>
+        const addedMessage = <span class="cstat-no" title="statement not covered" >&lt;div className="jumbotron"&gt;</span>
+            &lt;h3&gt;Song added!&lt;/h3&gt;
+        &lt;/div&gt;
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            &lt;Mutation mutation={ADD_SONG}&gt;
+                {<span class="fstat-no" title="function not covered" >(a</span>ddSong, { data }) =&gt; (
+<span class="cstat-no" title="statement not covered" >                &lt;form onSubmit={<span class="fstat-no" title="function not covered" >e </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >                    console.log('submit attempt');</span>
+<span class="cstat-no" title="statement not covered" >                    addSong({ variables: { title: title, tempo: tempo, keysPlayed: keysPlayed, keysPlayedLength: keysPlayedLength } });</span>
+<span class="cstat-no" title="statement not covered" >                    this.showAddedMessage();</span>
+<span class="cstat-no" title="statement not covered" >                    this.setState({</span>
+                        title: "",
+                        tempo: "",
+                        keysPlayed: [],
+                        keysPlayedLength: []
+                    })
+                }}&gt;
+                    {this.state.showAddedMessage ? addedMessage : &lt;h2&gt;Add New Song&lt;/h2&gt;}
+                    &lt;Link className="btn btn-primary mb-4" to={`/`}&gt;&amp;#8592; Back To Home&lt;/Link&gt;
+&nbsp;
+                    &lt;div className="form-group"&gt;
+                        &lt;label&gt;Title&lt;/label&gt;
+                        &lt;input type="text" className="form-control" id="title" value={title}
+                        onChange={<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >this.setState({title: e.target.value})}</span>
+                        /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="form-group"&gt;
+                        &lt;label&gt;Tempo&lt;/label&gt;
+                        &lt;input type="number" className="form-control" id="tempo" value={tempo}
+                        onChange={<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >this.setState({tempo: e.target.value})}</span>
+                        /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="form-group"&gt;
+                        &lt;label&gt;keys Played&lt;/label&gt;
+                        &lt;input type="text" className="form-control" id="keysPlayed" value={keysPlayed.join(",")}
+                        onChange={<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >this.modifyArray('keysPlayed', e.target.value)}</span>
+                        /&gt;
+                    &lt;/div&gt;
+                    &lt;div className="form-group"&gt;
+                        &lt;label&gt;keys Played Length&lt;/label&gt;
+                        &lt;input type="text" className="form-control" id="keysPlayedLength" value={keysPlayedLength.join(",")}
+                        onChange={<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >this.modifyArray('keysPlayedLength', e.target.value)}</span>
+                        /&gt;
+                    &lt;/div&gt;
+                    &lt;button className="btn btn-success col-12" type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+                )}
+            &lt;/Mutation&gt;)
+    }
+<span class="fstat-no" title="function not covered" >    mo</span>difyArray(state, value) {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            [state]: value.split(",")
+        })
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    sh</span>owAddedMessage() {
+<span class="cstat-no" title="statement not covered" >        this.setState({</span>
+            showAddedMessage: true
+        });
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                showAddedMessage: false
+            });
+        }, 2500)
+    }
+}
+&nbsp;
+export default SongNew;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Sep 29 2018 22:51:29 GMT+0200 (W. Europe Daylight Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

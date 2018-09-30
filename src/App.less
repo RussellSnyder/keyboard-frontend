@@ -1,7 +1,9 @@
-@import (css) "~bootstrap/dist/css/bootstrap.min.css";
+@import (less) "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 .App {
   text-align: center;
+  background: green;
+
 }
 
 .App-logo {
@@ -30,8 +32,13 @@
 }
 
 #Keyboard {
+  background: transparent;
+  transition: background 0.4s;
   &.not-ready {
     opacity: 0.4;
+  }
+  &.player-piano-mode {
+    background: fade(purple, 20%);
   }
   .white {
     fill:white;
@@ -41,10 +48,10 @@
     margin:2px;
   }
   .white:hover {
-    fill:#9e9e9e;
+    fill:#dedede;
     stroke:lightblue;
     cursor:pointer;
-    stroke-width:1;
+    stroke-width: 1px;
     outline: black solid 1px;
   }
   .black {
@@ -56,10 +63,57 @@
   .black:hover {
     fill:#515151;
     stroke:lightblue;
-    stroke-width:1;
+    stroke-width: 1px;
     outline: black solid 1px;
   }
+
   .playing {
     fill: yellow !important;
+    transition: fill 0.01s;
+  }
+  polygon.attack {
+    fill: orange !important;
+    stroke: red !important;
+  }
+}
+
+.song-info-container.updating {
+  opacity: 0.5;
+}
+
+button.btn.recording {
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 1.5s infinite;
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      opacity: 1;
+    }
+    70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      opacity: 0.8;
+    }
+    100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      opacity: 1;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      opacity: 1;
+    }
+    70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      opacity: 0.8;
+    }
+    100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      opacity: 1;
+    }
   }
 }
